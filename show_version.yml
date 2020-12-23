@@ -16,8 +16,6 @@
     copy:
       content: "{{ version.stdout[0] }}"
       dest: "/etc/ansible/{{ inventory_hostname }}.txt"
-      
-   - name: show-version
-     debug:
-       var: version
+    debug:
+      var: version
 
