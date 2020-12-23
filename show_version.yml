@@ -15,4 +15,4 @@
   - name: Save output to /etc/ansible/backups
     copy:
       content: "{{ version.stdout[0] }}"
-      dest: "/etc/ansible/backups/{{ inventory_hostname }}.txt"
+      dest: "/etc/ansible/{{ inventory_hostname }}.txt"
