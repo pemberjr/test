@@ -9,10 +9,10 @@
 
   - name: Show run command 
     ios_command:
-       commands: show run
-    register: config
+       commands: show version
+    register: version
 
   - name: Save output to /etc/ansible/backups
     copy:
-      content: "{{ config.stdout[0] }}"
+      content: "{{ version.stdout[0] }}"
       dest: "/etc/ansible/backups/{{ inventory_hostname }}.txt"
